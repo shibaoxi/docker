@@ -3,8 +3,9 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest' # set to windows-latest or another Windows vmImage for Windows builds
 variables:
-  imageName: 'davidshi/metrics-server'
+  imageName: 'davidshi/k8s/metrics-server'
   dockerHub: 'dockerHub'
+  tag: 'v0.5.0'
 steps:
 - task: Docker@2
   displayName: Build an image
@@ -12,6 +13,7 @@ steps:
     repository: $(imageName)
     command: build
     Dockerfile: Dockerfile
+    tags: $(tag)
 - task: Docker@2
   displayName: Push image
   inputs:
