@@ -3,7 +3,7 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest' # set to windows-latest or another Windows vmImage for Windows builds
 variables:
-  imageName: 'metrics-server'
+  imageName: 'metrics-server:v0.5.0'
   dockerHub: 'dockerHub'
 steps:
 - task: Docker@2
