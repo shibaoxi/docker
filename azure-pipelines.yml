@@ -3,9 +3,9 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest' # set to windows-latest or another Windows vmImage for Windows builds
 variables:
-  imageName: 'davidshi/metrics-server'
+  imageName: 'davidshi/kube-state-metrics'
   dockerHub: 'dockerHub'
-  tag: 'v0.5.0'
+  tag: 'v2.0.0'
 steps:
 - task: Docker@2
   displayName: Build an image
