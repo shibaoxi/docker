@@ -21,4 +21,5 @@ steps:
       $(dockerHub)
     repository: $(imageName)
     command: push
+    tags: $(tag)
     
